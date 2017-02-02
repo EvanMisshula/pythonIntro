@@ -7,16 +7,25 @@ def apply_to_one(f):
     """calls the function f with 1 as its argument"""
     return f(1)
 
+def apply_to_four(f):
+    return f(4)
+
 my_double = double
 x = apply_to_one(my_double)
 print x
 
+my_doubleF = double
+y = apply_to_four(my_doubleF)
+print y
+
+
 # Anonymous functions
 
 y = apply_to_one(lambda x: x + 4)
-
+print y
 
 another_double = lambda x: 2 * x
+
 def another_double(x):
     return 2*x
 
@@ -32,6 +41,6 @@ my_print()
 def subtract(a=0, b=0):
     return a - b
 
-subtract(10,5)
-subtract(0,5)
-subtract(b=5)
+print subtract(10,5)
+print subtract(0,5)
+print subtract(b=5)
